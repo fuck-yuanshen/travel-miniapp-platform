@@ -1,5 +1,6 @@
 ﻿/* eslint-disable no-console */
 const baseUrl = process.env.API_BASE_URL || "http://127.0.0.1:5000/api";
+const demoPassword = process.env.TRAVEL_DEMO_PASSWORD || "change-me-before-use";
 
 function now() {
   return new Date().toISOString();
@@ -76,7 +77,7 @@ async function main() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           username: "user01",
-          password: "123456",
+          password: demoPassword,
           role: "user",
         }),
       });
@@ -94,7 +95,7 @@ async function main() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           username: "merchant01",
-          password: "123456",
+          password: demoPassword,
           role: "merchant",
         }),
       });
@@ -112,7 +113,7 @@ async function main() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           username: "admin01",
-          password: "123456",
+          password: demoPassword,
           role: "admin",
         }),
       });
@@ -645,7 +646,7 @@ async function main() {
         method: "POST",
         body: JSON.stringify({
           username,
-          password: "123456",
+          password: demoPassword,
           nickname: "鎺ュ彛娴嬭瘯鏂板鐢ㄦ埛",
           phone: "13900001111",
           role: "user",
