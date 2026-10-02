@@ -6,4 +6,5 @@ dist/
 *.db
 uploads/
 .env
+*.log
 .DS_Store
